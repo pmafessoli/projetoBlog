@@ -34,13 +34,19 @@ INSTALLED_APPS = [
     'posts',
     'categorias',
     'comentarios',
+    'produto',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.humanize"
+    "django.contrib.humanize",
+
+
+    # TODO: Remover debug toolbar
+    #adicionado nos aps após ter instalado via terminal por pip install django-debug-toolbar
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +57,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+        # TODO: Remover debug toolbar
+    #adicionado nos aps após ter instalado via terminal por pip install django-debug-toolbar
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = "blog.urls"
@@ -146,16 +155,28 @@ MESSAGE_TAGS = {
 
 INSTALLED_APPS += ('django_summernote', )
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-###### settings.py
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+#Sessão em dias: 60s * 60m *24H * 1d
+SESSION_COOKIE_SECURE = 60 * 60 * 24 * 7
+
+#Salvar a cada requesição
+SESSION_SAVE_EVERY_REQUEST = False
+
+
+
+ # TODO: Remover debug toolbar
+    #adicionado nos aps após ter instalado via terminal por pip install django-debug-toolbar
+INTERNAL_IPS = [
+    #...
+    '127.0.0.1',
+    #...
+]
 
 try:
     from .local_settings import *
