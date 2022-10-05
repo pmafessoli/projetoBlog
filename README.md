@@ -1,5 +1,5 @@
 # projetoBlog
-Projeto inicial de um blogo, no qual está sedo refatorado para a inclusão de funcionalides de um ecomerce.
+Projeto inicial de um blog, no qual está sedo refatorado para a inclusão de funcionalides de um ecomerce.
 
 Tecnlogias:
 *Python3
