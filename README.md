@@ -1,6 +1,16 @@
 # projetoBlog
-Projeto de um blog feito em python utlizando a framework django. As próximas estapas serão a refatoração do código e fazer o deploy da aplicação
+Projeto inicial de um blogo, no qual está sedo refatorado para a inclusão de funcionalides de um ecomerce.
 
-*Vscode
-*Linux
+Tecnlogias:
 *Python3
+*Django
+*JavaScript
+*HTML
+*CSS
+*Bootstrap
+*Mysql
+
+*Ferramentas:
+*Vscode
+*Mysql WorkBench
+*Linux Ubuntu
