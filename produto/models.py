@@ -63,9 +63,9 @@ class Produto(models.Model):
         return self.nome
 
 
-class Varicao(models.Model):
+class Variacao(models.Model):
 
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE, related_name="varicoes")
     nome = models.CharField(max_length=50, blank = True, null=True)
     preco = models.FloatField()
     preco_promocional = models.FloatField(default=0)
