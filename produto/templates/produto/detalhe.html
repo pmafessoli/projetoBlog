@@ -32,7 +32,7 @@
           <form action="{% url 'produto:adicionaraocarrinho' %}" id="form-add-to-cart">
             <div class="form-group">
               <select id="select-variacoes" name="vid" class="form-control form-control-lg">
-                {% for variacao in produto.varicoes.all %} {% if variacao.preco_promocional %}
+                {% for variacao in produto.variacoes.all %} {% if variacao.preco_promocional %}
                 <option data-preco="{{ variacao.preco | formata_preco }}" data-preco-promocional="{{ variacao.preco_promocional | formata_preco }}" value="{{ variacao.id }}">
                   { {% if varicao.nome %} {{ variacao.nome }} {% else %} {{ variacao.nome }} {% endif %}
                 </option>

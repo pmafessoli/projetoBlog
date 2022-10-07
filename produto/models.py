@@ -65,7 +65,7 @@ class Produto(models.Model):
 
 class Variacao(models.Model):
 
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE, related_name="varicoes")
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE, related_name="variacoes")
     nome = models.CharField(max_length=50, blank = True, null=True)
     preco = models.FloatField()
     preco_promocional = models.FloatField(default=0)
